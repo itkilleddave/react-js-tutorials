@@ -1,16 +1,5 @@
 import { combineReducers, createStore } from "redux";
 
-// const reducer = function(state, action) {
-  
-//   if (action.type === "INC") {
-//     return state+action.payload
-//   } 
-//   if (action.type === "DEC") {
-//     return state-action.payload
-//   } 
-//   return state;
-// }
-
 const userReducer = (state={}, action) => {
   switch(action.type) {
     case "CHANGE_NAME" : {
@@ -38,6 +27,5 @@ store.subscribe(() => {
   console.log("store changed", store.getState())
 })
 
-//INC
 store.dispatch({type: "CHANGE_NAME", payload: "Daryl"});
 store.dispatch({type: "CHANGE_AGE", payload: 45});

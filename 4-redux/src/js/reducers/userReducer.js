@@ -1,7 +1,7 @@
 export default function(state={
   fetching: false,
   fetched: false,
-  users: [],
+  user: {id: null, name: null, age: null},
   error: null,
 }, action) {
 
@@ -18,7 +18,7 @@ export default function(state={
         ...state, 
         fetching: false, 
         fetched: true, 
-        users: action.payload
+        user: action.payload
       }
       break
     }
